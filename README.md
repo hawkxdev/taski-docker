@@ -17,14 +17,10 @@
 
 ## Архитектура
 
-```
-┌─────────┐     ┌──────────┐     ┌───────────┐
-│  Nginx  │────▶│  Backend  │────▶│ PostgreSQL │
-│  :80    │     │  :8000    │     │  :5432     │
-└─────────┘     └──────────┘     └───────────┘
-     │
-     └──────▶ /staticfiles/ (frontend build + backend static)
-```
+| Nginx :80 | → | Backend :8000 | → | PostgreSQL :5432 |
+|-----------|---|---------------|---|------------------|
+
+Nginx также раздаёт `/staticfiles/` (frontend build + backend static).
 
 ## Необходимое ПО
 
